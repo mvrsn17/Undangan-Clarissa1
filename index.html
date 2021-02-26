@@ -29,6 +29,15 @@
       color: #f44336;
     }
   </style>
+  <!-- MAP CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin="" />
+  <!-- Make sure you put this AFTER Leaflet's CSS -->
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+    crossorigin=""></script>
+
 </head>
 
 <body>
@@ -1495,6 +1504,14 @@
                         Kecamatan Rappocini, Kota Makassar, Sulawesi Selatan 90222</p>
                     </div>
                   </div>
+
+                  <!-- MAP SECTION -->
+                  <section class="text-center" id="map-section" style="margin-bottom: 10rem">
+                    <div class="col-md-offset-1 col-md-10 text-center">
+                      <div id="map-canvas-3" class="animation fadeIn" style="height:500px; width:100%;"></div>
+                  </section>
+                  <!-- END of MAP SECTION -->
+
                   <!-- <div class="container">
                     <div class="col-md-3 col-md-offset-0 col-sm-4 col-sm-offset-0 col-xs-6 text-center wow bounceIn"
                       data-class="bounceIn"> <a href="#" target="_blank">
@@ -1582,6 +1599,8 @@
                         <p> Tiada yang dapat kami ungkapkan selain rasa terima kasih dari hati yang tulus, Apabila
                           Bapak/Ibu/ saudara/i berkenan hadir untuk memberikan restu kepada kami. Wassalamuallaikum
                           Warahmatullahi Wabarakatuh. <br>
+                          <br>
+                          <img src="images/Logo-TC.png" style="height:100px;">
                           <!-- <span>17 Nov 2016</span>
                         </p>
                         <div id="Success" class="successalert" style=" display:none;"> <strong>Thank you</strong>.

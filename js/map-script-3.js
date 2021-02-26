@@ -1,12 +1,12 @@
 (function () {
   let mymap = L.map("map-canvas-3", { scrollWheelZoom: false }).setView(
-    [-5.178635195755666, 119.45995570273618],
+    [-5.163403171980014, 119.43479328250096],
     17
   );
 
-  let marker = L.marker([-5.178635195755666, 119.45995570273618]).addTo(mymap);
+  let marker = L.marker([-5.163403171980014, 119.43479328250096]).addTo(mymap);
 
-  marker.bindPopup("<b>Lokasi Acara</b><br>Minasa Upa Blok N9/29.").openPopup();
+  marker.bindPopup("<b>Lokasi Acara</b><br>Gedung Lappo Ase.").openPopup();
 
   let map = L.tileLayer(
     "https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}",
