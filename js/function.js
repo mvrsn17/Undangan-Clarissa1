@@ -1,159 +1,159 @@
 /*Scripts starts*/
-$(document).on("ready", function () {
-  "use strict";
-  $(".hamburger").on("click", function () {
-    if ($(".navbar-fixed-left").css("right") == "-100px") {
-      $(".navbar-fixed-left").animate({ right: "0px" }, "slow");
+$(document).on('ready', function () {
+  'use strict';
+  $('.hamburger').on('click', function () {
+    if ($('.navbar-fixed-left').css('right') == '-100px') {
+      $('.navbar-fixed-left').animate({ right: '0px' }, 'slow');
     } else {
-      if ($(".navbar-fixed-left").css("overflow-y") == "scroll") {
-        $(".navbar-fixed-left").animate({ right: "-100px" }, "slow");
+      if ($('.navbar-fixed-left').css('overflow-y') == 'scroll') {
+        $('.navbar-fixed-left').animate({ right: '-100px' }, 'slow');
       }
     }
   });
 
-  $(document).on("click", function (evt) {
-    if ($(".resonsive-tab").css("display") == "block") {
-      if (evt.target.class == "hamburger") {
+  $(document).on('click', function (evt) {
+    if ($('.resonsive-tab').css('display') == 'block') {
+      if (evt.target.class == 'hamburger') {
         return;
       }
-      if ($(evt.target).closest(".hamburger").length) {
+      if ($(evt.target).closest('.hamburger').length) {
         return;
       } else {
-        if ($(".navbar-fixed-left").css("overflow-y") == "scroll") {
-          $(".navbar-fixed-left").animate({ right: "-100px" }, "slow");
+        if ($('.navbar-fixed-left').css('overflow-y') == 'scroll') {
+          $('.navbar-fixed-left').animate({ right: '-100px' }, 'slow');
         }
       }
     }
   });
 
   //Vertical icon-menu active script
-  $(".vertical_iconmenu li").on("click", function () {
-    $(".page-top").removeClass("display_none");
-    $(".wow").attr(
-      "style",
-      "visibility: hidden; animation-name: none; -webkit-transform:translateY(20px); -moz-transform:translateY(20px); -ms-transform:translateY(20px); -o-transform:translateY(20px); transform:translateY(20px); -webkit-animation-duration: 2s; -moz-animation-duration: 2s; -ms-animation-duration: 2s; -o-animation-duration: 2s; animation-duration: 2s;"
+  $('.vertical_iconmenu li').on('click', function () {
+    $('.page-top').removeClass('display_none');
+    $('.wow').attr(
+      'style',
+      'visibility: hidden; animation-name: none; -webkit-transform:translateY(20px); -moz-transform:translateY(20px); -ms-transform:translateY(20px); -o-transform:translateY(20px); transform:translateY(20px); -webkit-animation-duration: 2s; -moz-animation-duration: 2s; -ms-animation-duration: 2s; -o-animation-duration: 2s; animation-duration: 2s;'
     );
 
-    $(".vertical_iconmenu li").find("a").removeClass("active");
-    $(".vertical_iconmenu li").removeClass("active");
-    $(this).find("a").addClass("active");
-    $(this).addClass("active");
+    $('.vertical_iconmenu li').find('a').removeClass('active');
+    $('.vertical_iconmenu li').removeClass('active');
+    $(this).find('a').addClass('active');
+    $(this).addClass('active');
 
     setTimeout(function () {
-      $(".wow").each(function () {
+      $('.wow').each(function () {
         $(this).attr(
-          "style",
-          "visibility: visible; animation-name: " +
-            $(this).attr("data-class") +
-            "; -webkit-transform:translateY(0px); -moz-transform:translateY(0px); -ms-transform:translateY(0px); -o-transform:translateY(0px); transform:translateY(0px); -webkit-animation-duration: 2s; -moz-animation-duration: 2s; -ms-animation-duration: 2s; -o-animation-duration: 2s; animation-duration: 2s;"
+          'style',
+          'visibility: visible; animation-name: ' +
+            $(this).attr('data-class') +
+            '; -webkit-transform:translateY(0px); -moz-transform:translateY(0px); -ms-transform:translateY(0px); -o-transform:translateY(0px); transform:translateY(0px); -webkit-animation-duration: 2s; -moz-animation-duration: 2s; -ms-animation-duration: 2s; -o-animation-duration: 2s; animation-duration: 2s;'
         );
       });
     }, 200);
   });
 
-  $(".hover-menu li, .hover-menu-2 li").on("click", function () {
-    $(".other-menu").addClass("active");
-    $(".other-menu a").addClass("active selected");
+  $('.hover-menu li, .hover-menu-2 li').on('click', function () {
+    $('.other-menu').addClass('active');
+    $('.other-menu a').addClass('active selected');
   });
 
-  $(".other-menu")
-    .on("mouseenter", function () {
-      $(".hover-menu").animate(
+  $('.other-menu')
+    .on('mouseenter', function () {
+      $('.hover-menu').animate(
         {
-          "-moz-transform": "translate3d(399px, 0px, 0px)",
-          "-webkit-transform": "translate3d(399px, 0px, 0px)",
-          "-ms-transform": "translate3d(399px, 0px, 0px)",
-          "-o-transform": "translate3d(399px, 0px, 0px)",
-          transform: "translate3d(399px, 0px, 0px)",
+          '-moz-transform': 'translate3d(399px, 0px, 0px)',
+          '-webkit-transform': 'translate3d(399px, 0px, 0px)',
+          '-ms-transform': 'translate3d(399px, 0px, 0px)',
+          '-o-transform': 'translate3d(399px, 0px, 0px)',
+          transform: 'translate3d(399px, 0px, 0px)',
         },
-        "fast"
+        'fast'
       );
       setTimeout(function () {
-        $(".hover-menu")
-          .css("-moz-transform", "translate3d(399px, 0px, 0px)")
-          .css("-webkit-transform", "translate3d(399px, 0px, 0px)")
-          .css("-ms-transform", "translate3d(399px, 0px, 0px)")
-          .css("-o-transform", "translate3d(399px, 0px, 0px)")
-          .css("transform", "translate3d(399px, 0px, 0px)");
-        $(".other-menu").addClass("active");
-        $(".other-menu a").addClass("active selected");
+        $('.hover-menu')
+          .css('-moz-transform', 'translate3d(399px, 0px, 0px)')
+          .css('-webkit-transform', 'translate3d(399px, 0px, 0px)')
+          .css('-ms-transform', 'translate3d(399px, 0px, 0px)')
+          .css('-o-transform', 'translate3d(399px, 0px, 0px)')
+          .css('transform', 'translate3d(399px, 0px, 0px)');
+        $('.other-menu').addClass('active');
+        $('.other-menu a').addClass('active selected');
       }, 200);
     })
-    .on("mouseleave", function () {
-      $(".hover-menu").animate(
+    .on('mouseleave', function () {
+      $('.hover-menu').animate(
         {
-          "-moz-transform": "translate3d(0px, 0px, 0px)",
-          "-webkit-transform": "translate3d(0px, 0px, 0px)",
-          "-ms-transform": "translate3d(0px, 0px, 0px)",
-          "-o-transform": "translate3d(0px, 0px, 0px)",
-          transform: "translate3d(0px, 0px, 0px)",
+          '-moz-transform': 'translate3d(0px, 0px, 0px)',
+          '-webkit-transform': 'translate3d(0px, 0px, 0px)',
+          '-ms-transform': 'translate3d(0px, 0px, 0px)',
+          '-o-transform': 'translate3d(0px, 0px, 0px)',
+          transform: 'translate3d(0px, 0px, 0px)',
         },
-        "fast"
+        'fast'
       );
       setTimeout(function () {
-        $(".other-menu").removeClass("active");
-        $(".other-menu a").removeClass("active selected");
-        $(".hover-menu")
-          .css("-moz-transform", "translate3d(0px, 0px, 0px)")
-          .css("-webkit-transform", "translate3d(0px, 0px, 0px)")
-          .css("-ms-transform", "translate3d(0px, 0px, 0px)")
-          .css("-o-transform", "translate3d(0px, 0px, 0px)")
-          .css("transform", "translate3d(0px, 0px, 0px)");
+        $('.other-menu').removeClass('active');
+        $('.other-menu a').removeClass('active selected');
+        $('.hover-menu')
+          .css('-moz-transform', 'translate3d(0px, 0px, 0px)')
+          .css('-webkit-transform', 'translate3d(0px, 0px, 0px)')
+          .css('-ms-transform', 'translate3d(0px, 0px, 0px)')
+          .css('-o-transform', 'translate3d(0px, 0px, 0px)')
+          .css('transform', 'translate3d(0px, 0px, 0px)');
       }, 200);
     });
 
-  $(".other-menu")
-    .on("mouseenter", function () {
-      $(".hover-menu-2").animate(
+  $('.other-menu')
+    .on('mouseenter', function () {
+      $('.hover-menu-2').animate(
         {
-          "-moz-transform": "translate3d(451px, 0px, 0px)",
-          "-webkit-transform": "translate3d(451px, 0px, 0px)",
-          "-ms-transform": "translate3d(451px, 0px, 0px)",
-          "-o-transform": "translate3d(451px, 0px, 0px)",
-          transform: "translate3d(451px, 0px, 0px)",
+          '-moz-transform': 'translate3d(451px, 0px, 0px)',
+          '-webkit-transform': 'translate3d(451px, 0px, 0px)',
+          '-ms-transform': 'translate3d(451px, 0px, 0px)',
+          '-o-transform': 'translate3d(451px, 0px, 0px)',
+          transform: 'translate3d(451px, 0px, 0px)',
         },
-        "fast"
+        'fast'
       );
       setTimeout(function () {
-        $(".hover-menu-2")
-          .css("-moz-transform", "translate3d(451px, 0px, 0px)")
-          .css("-webkit-transform", "translate3d(451px, 0px, 0px)")
-          .css("-ms-transform", "translate3d(451px, 0px, 0px)")
-          .css("-o-transform", "translate3d(451px, 0px, 0px)")
-          .css("transform", "translate3d(451px, 0px, 0px)");
-        $(".other-menu").addClass("active");
-        $(".other-menu a").addClass("active selected");
+        $('.hover-menu-2')
+          .css('-moz-transform', 'translate3d(451px, 0px, 0px)')
+          .css('-webkit-transform', 'translate3d(451px, 0px, 0px)')
+          .css('-ms-transform', 'translate3d(451px, 0px, 0px)')
+          .css('-o-transform', 'translate3d(451px, 0px, 0px)')
+          .css('transform', 'translate3d(451px, 0px, 0px)');
+        $('.other-menu').addClass('active');
+        $('.other-menu a').addClass('active selected');
       }, 200);
     })
-    .on("mouseleave", function () {
-      $(".hover-menu-2").animate(
+    .on('mouseleave', function () {
+      $('.hover-menu-2').animate(
         {
-          "-moz-transform": "translate3d(0px, 0px, 0px)",
-          "-webkit-transform": "translate3d(0px, 0px, 0px)",
-          "-ms-transform": "translate3d(0px, 0px, 0px)",
-          "-o-transform": "translate3d(0px, 0px, 0px)",
-          transform: "translate3d(0px, 0px, 0px)",
+          '-moz-transform': 'translate3d(0px, 0px, 0px)',
+          '-webkit-transform': 'translate3d(0px, 0px, 0px)',
+          '-ms-transform': 'translate3d(0px, 0px, 0px)',
+          '-o-transform': 'translate3d(0px, 0px, 0px)',
+          transform: 'translate3d(0px, 0px, 0px)',
         },
-        "fast"
+        'fast'
       );
       setTimeout(function () {
-        $(".hover-menu-2")
-          .css("-moz-transform", "translate3d(0px, 0px, 0px)")
-          .css("-webkit-transform", "translate3d(0px, 0px, 0px)")
-          .css("-ms-transform", "translate3d(0px, 0px, 0px)")
-          .css("-o-transform", "translate3d(0px, 0px, 0px)")
-          .css("transform", "translate3d(0px, 0px, 0px)");
-        $(".other-menu").removeClass("active");
-        $(".other-menu a").removeClass("active selected");
+        $('.hover-menu-2')
+          .css('-moz-transform', 'translate3d(0px, 0px, 0px)')
+          .css('-webkit-transform', 'translate3d(0px, 0px, 0px)')
+          .css('-ms-transform', 'translate3d(0px, 0px, 0px)')
+          .css('-o-transform', 'translate3d(0px, 0px, 0px)')
+          .css('transform', 'translate3d(0px, 0px, 0px)');
+        $('.other-menu').removeClass('active');
+        $('.other-menu a').removeClass('active selected');
       }, 200);
     });
 
   // JavaScript Document
   var today = new Date();
-  var target = new Date("03/06/2021 10:00:00"); //Enter Target date & time - MM/DD/YYYY hh:mm:ss
-  var startdate = new Date("02/23/2021"); //Enter Timer start date or Today's date - MM/DD/YYYY
-  if ($.find(".countdown").length) {
-    $(".countdown").final_countdown(
+  var target = new Date('03/06/2021 10:00:00'); //Enter Target date & time - MM/DD/YYYY hh:mm:ss
+  var startdate = new Date('02/23/2021'); //Enter Timer start date or Today's date - MM/DD/YYYY
+  if ($.find('.countdown').length) {
+    $('.countdown').final_countdown(
       {
         start: startdate.getTime() / 1000,
         end: target.getTime() / 1000,
@@ -165,53 +165,53 @@ $(document).on("ready", function () {
     );
   }
   $(window).load(function () {
-    if ($.find(".gridlayout").length) {
-      $(".gridlayout").isotope({
-        itemSelector: ".grid-item",
+    if ($.find('.gridlayout').length) {
+      $('.gridlayout').isotope({
+        itemSelector: '.grid-item',
         masonry: {
-          columnWidth: ".grid-item",
+          columnWidth: '.grid-item',
         },
       });
     }
   });
 
   /*Timer for wedding page*/
-  if ($.find("#example").length) {
-    $("#example").countdown(
+  if ($.find('#example').length) {
+    $('#example').countdown(
       {
-        date: "03/06/2021 10:00:00", //Enter Target date & time - MM/DD/YYYY hh:mm:ss
+        date: '03/06/2021 10:00:00', //Enter Target date & time - MM/DD/YYYY hh:mm:ss
         offset: +5.5,
-        day: "Day",
-        days: "Days",
+        day: 'Day',
+        days: 'Days',
       },
       function () {}
     );
   }
 
   //Horizontal Tab
-  if ($.find("#parentHorizontalTab").length) {
-    $("#parentHorizontalTab").easyResponsiveTabs({
-      type: "default", //Types: default, vertical, accordion
-      width: "auto", //auto or any width like 600px
+  if ($.find('#parentHorizontalTab').length) {
+    $('#parentHorizontalTab').easyResponsiveTabs({
+      type: 'default', //Types: default, vertical, accordion
+      width: 'auto', //auto or any width like 600px
       fit: true, // 100% fit in a container
-      tabidentify: "hor_1", // The tab groups identifier
+      tabidentify: 'hor_1', // The tab groups identifier
       activate: function (event) {
         // Callback function if tab is switched
         var $tab = $(this);
-        var $info = $("#nested-tabInfo");
-        var $name = $("span", $info);
+        var $info = $('#nested-tabInfo');
+        var $name = $('span', $info);
         $name.text($tab.text());
         $info.show();
       },
     });
   }
   // Child Tab
-  if ($.find("#ChildVerticalTab_1").length) {
-    $("#ChildVerticalTab_1").easyResponsiveTabs({
-      type: "vertical",
-      width: "auto",
+  if ($.find('#ChildVerticalTab_1').length) {
+    $('#ChildVerticalTab_1').easyResponsiveTabs({
+      type: 'vertical',
+      width: 'auto',
       fit: true,
-      tabidentify: "ver_1", // The tab groups identifier
+      tabidentify: 'ver_1', // The tab groups identifier
       activetab_bg: null,
       inactive_bg: null,
       active_border_color: null,
@@ -219,18 +219,18 @@ $(document).on("ready", function () {
     });
   }
   //Vertical Tab
-  if ($.find("#parentVerticalTab").length) {
-    $("#parentVerticalTab").easyResponsiveTabs({
-      type: "vertical", //Types: default, vertical, accordion
-      width: "auto", //auto or any width like 600px
+  if ($.find('#parentVerticalTab').length) {
+    $('#parentVerticalTab').easyResponsiveTabs({
+      type: 'vertical', //Types: default, vertical, accordion
+      width: 'auto', //auto or any width like 600px
       fit: true, // 100% fit in a container
-      closed: "accordion", // Start closed if in accordion view
-      tabidentify: "hor_1", // The tab groups identifier
+      closed: 'accordion', // Start closed if in accordion view
+      tabidentify: 'hor_1', // The tab groups identifier
       activate: function (event) {
         // Callback function if tab is switched
         var $tab = $(this);
-        var $info = $("#nested-tabInfo2");
-        var $name = $("span", $info);
+        var $info = $('#nested-tabInfo2');
+        var $name = $('span', $info);
         $name.text($tab.text());
         $info.show();
       },
@@ -240,16 +240,16 @@ $(document).on("ready", function () {
   /*------------slick slider-------------------*/
 
   /*-----photo gallery------------*/
-  if ($.find(".fancybox").length) {
-    $(".fancybox").fancybox();
+  if ($.find('.fancybox').length) {
+    $('.fancybox').fancybox();
   }
   //gallery 2 other
-  if ($.find(".fancybox2").length) {
-    $(".fancybox2").fancybox();
+  if ($.find('.fancybox2').length) {
+    $('.fancybox2').fancybox();
   }
   /*-----------------------------------people page slider------------------------*/
-  if ($.find(".the-people-slider").length) {
-    $(".the-people-slider").slick({
+  if ($.find('.the-people-slider').length) {
+    $('.the-people-slider').slick({
       infinite: true,
       slidesToShow: 1,
       slidesToScroll: 1,
@@ -287,8 +287,8 @@ $(document).on("ready", function () {
       ],
     });
   }
-  if ($.find(".ceremony-slider").length) {
-    $(".ceremony-slider").slick({
+  if ($.find('.ceremony-slider').length) {
+    $('.ceremony-slider').slick({
       dots: false,
       infinite: true,
       speed: 300,
@@ -330,7 +330,7 @@ $(document).on("ready", function () {
     });
   }
   window.wow = new WOW({
-    animateClass: "animated",
+    animateClass: 'animated',
     offset: 0,
     callback: function () {},
   });
@@ -338,27 +338,40 @@ $(document).on("ready", function () {
   wow.init();
 });
 var _gaq = _gaq || [];
-_gaq.push(["_setAccount", "UA-36251023-1"]);
-_gaq.push(["_setDomainName", "jqueryscript.net"]);
-_gaq.push(["_trackPageview"]);
+_gaq.push(['_setAccount', 'UA-36251023-1']);
+_gaq.push(['_setDomainName', 'jqueryscript.net']);
+_gaq.push(['_trackPageview']);
 
 (function () {
-  var ga = document.createElement("script");
-  ga.type = "text/javascript";
+  var ga = document.createElement('script');
+  ga.type = 'text/javascript';
   ga.async = true;
   ga.src =
-    ("https:" == document.location.protocol ? "https://ssl" : "http://www") +
-    ".google-analytics.com/ga.js";
-  var s = document.getElementsByTagName("script")[0];
+    ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') +
+    '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0];
   s.parentNode.insertBefore(ga, s);
 })();
 
 document.onreadystatechange = function () {
   var state = document.readyState;
-  if (state == "interactive") {
-  } else if (state == "complete") {
+  if (state == 'interactive') {
+  } else if (state == 'complete') {
     setTimeout(function () {
-      $("#load").animate({ opacity: "0" }, "fast");
+      $('#load').animate({ opacity: '0' }, 'fast');
     }, 1000);
   }
 };
+
+const audio = document.querySelector('audio');
+const audioButton = document.querySelector('.audio-button');
+
+function audioPlay() {
+  if (audio.paused) {
+    audio.play();
+    audioButton.innerHTML = `<img src="images/speaker.png">`;
+  } else {
+    audio.pause();
+    audioButton.innerHTML = `<img src="images/muted.png">`;
+  }
+}
